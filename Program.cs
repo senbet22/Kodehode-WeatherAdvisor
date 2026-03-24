@@ -28,77 +28,70 @@ Console.ReadKey();
 
 void Snow ()
 {
-  if (temperature <= -30)
-    {
+  switch (temperature)
+  {
+    case <= -30:
       Console.WriteLine("If i was you i would move somewhere else");
-    }
-
-  else if (temperature <= -10)
-    {
+      break;
+    case <= -10:
       Console.WriteLine("Now is the time to put on your thermal underwear.");
-    }
-  else if (temperature <= 0)
-    {
+      break;
+    case <= 0:
       Console.WriteLine("Heavy winter coat, gloves, and a hat.");
-    }
-  else if (temperature <= 10)
-    {
+      break;
+    case <= 10:
       Console.WriteLine("Light snow, still cold. Layer up.");
-    }
-  else
-    {
+      break;
+    default:
       Console.WriteLine("I dont believe you!");
-    }
+      break;
+  }
 
 }
 
 
 void Rain()
 {
-    if (temperature <= -30)
-    {
+  switch (temperature)
+  {
+    case <= -30:
       Console.WriteLine("That's not rain, if you could feel you would know.");
-    }
-    else if (temperature <= -10)
-    {
+      break;
+    case <= -10:
       Console.WriteLine("Ice rain incoming. Waterproof everything and walk slowly.");
-    }
-    else if (temperature <= 0)
-    {
+      break;
+    case <= 0:
       Console.WriteLine("Cold rain. Waterproof coat and warm layers underneath.");
-    }
-    else if (temperature <= 10)
-    {
+      break;
+    case <= 10:
       Console.WriteLine("You must be in Bergen.");
-    }
-    else
-    {
+      break;
+    default:
       Console.WriteLine("This is the best condition to go for a run!");
-    }
+      break;
+  }
 }
 
 
 void Sun()
 {
-    if (temperature <= -30)
-    {
-        Console.WriteLine("Sun is lying to you.");
-    }
-    else if (temperature <= -10)
-    {
-        Console.WriteLine("Crisp and sunny. Coat, gloves, Maybe go Ski.");
-    }
-    else if (temperature <= 0)
-    {
-        Console.WriteLine("Cold but pleasant. Jacket and maybe a scarf.");
-    }
-    else if (temperature <= 10)
-    {
-        Console.WriteLine("Light jacket weather. Nice day!");
-    }
-    else
-    {
-        Console.WriteLine("Sunscreen and shades! also can you send me your location?");
-    }
+  switch (temperature)
+  {
+    case <= -30:
+      Console.WriteLine("Sun is lying to you.");
+      break;
+    case <= -10:
+      Console.WriteLine("Crisp and sunny. Coat, gloves, Maybe go Ski.");
+      break;
+    case <= 0:
+      Console.WriteLine("Cold but pleasant. Jacket and maybe a scarf.");
+      break;
+    case <= 10:
+      Console.WriteLine("Light jacket weather. Nice day!");
+      break;
+    default:
+      Console.WriteLine("Sunscreen and shades! also can you send me your location?");
+      break;
+  }
 }
 
