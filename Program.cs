@@ -1,30 +1,47 @@
 ﻿
-Console.WriteLine("Welcome to WeatherAdvisor!");
-Console.WriteLine("Enter temperature: e.g. -30, -20, -10, 0, 10, 20, 30");
-string tempInput = Console.ReadLine();
-int temperature = int.Parse(tempInput);
-
-Console.WriteLine("Enter weather condition (snow/rain/sun)");
-string weatherCondition = Console.ReadLine().ToLower();
-
-
-
-switch (weatherCondition)
+int temperature = 0;
+do
 {
-  case  "snow":
-    Snow();
+  Console.WriteLine();
+  Console.WriteLine("Welcome to WeatherAdvisor! (X) to Exit");
+
+  Console.WriteLine("Enter temperature: e.g. -30, 10, 20");
+  string tempInput = Console.ReadLine() ?? "";
+
+  if (tempInput.ToLower() == "x")
+  {
+    Console.WriteLine("Goodbye!");
     break;
-  case "rain":
-    Rain();
-    break;
-  case "sun":
-    Sun();
-    break;
-  default:
-    Console.WriteLine("Invalid input");
-    break;
-}
-Console.ReadKey();
+  }
+
+  if (!int.TryParse(tempInput, out temperature))
+  {
+    Console.WriteLine("Invalid input. Please enter a number.");
+    continue;
+  }
+  
+  Console.WriteLine("Enter weather condition (snow/rain/sun)");
+  string weatherCondition = Console.ReadLine()?.ToLower() ?? "";
+
+  switch (weatherCondition)
+  {
+    case  "snow":
+      Snow();
+      break;
+    case "rain":
+      Rain();
+      break;
+    case "sun":
+      Sun();
+      break;
+    default:
+      Console.WriteLine("Invalid input please enter: (snow, rain or sun)");
+      break;
+  }
+  Console.ReadKey();
+
+} while (true);
+
 
 void Snow ()
 {
@@ -73,7 +90,7 @@ void Rain()
       Console.WriteLine("Warm tropical rain. Refreshing but watch out for flash floods.");
       break;           
     default:
-      Console.WriteLine("Dont worry you will dry up in seconds.");
+      Console.WriteLine("Dont worry you will dry up in seconds!");
       break;
   }
 }
