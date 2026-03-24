@@ -66,8 +66,14 @@ void Rain()
     case <= 10:
       Console.WriteLine("You must be in Bergen.");
       break;
-    default:
+    case <= 20:
       Console.WriteLine("This is the best condition to go for a run!");
+      break;
+    case <= 30:
+      Console.WriteLine("Warm tropical rain. Refreshing but watch out for flash floods.");
+      break;           
+    default:
+      Console.WriteLine("Dont worry you will dry up in seconds.");
       break;
   }
 }
@@ -89,8 +95,14 @@ void Sun()
     case <= 10:
       Console.WriteLine("Light jacket weather. Nice day!");
       break;
-    default:
+    case <= 20:
       Console.WriteLine("Sunscreen and shades! also can you send me your location?");
+      break;
+    case <= 30:
+      Console.WriteLine("You have done well for yourself.");
+      break;
+    default:
+      Console.WriteLine("Are you in Hell?");
       break;
   }
 }
