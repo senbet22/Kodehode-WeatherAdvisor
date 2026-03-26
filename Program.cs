@@ -50,8 +50,6 @@ do
       Console.WriteLine("Invalid input please enter: (snow, rain or sun)");
       break;
   }
-  Console.ReadKey();
-
 } while (true);
 
 void Snow ()
