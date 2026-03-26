@@ -1,4 +1,16 @@
-﻿
+﻿///
+/// Welcome to Weather Advisor Application:
+/// 
+/// User inputs temperature (int) followed by condittion (string).  and gets weather advice.  
+/// Either clothing advice or something funny based on user input combination. 
+/// 
+/// The whole app should be wrapped in a Do While loop until user exits.
+/// use switch statements for conditions and temperatures.
+/// Use Methods for better readability.
+/// 
+/// !! Check all conditions/scenarios work and have error handling for invalid input.
+///
+
 int temperature = 0;
 do
 {
@@ -41,7 +53,6 @@ do
   Console.ReadKey();
 
 } while (true);
-
 
 void Snow ()
 {
@@ -123,4 +134,3 @@ void Sun()
       break;
   }
 }
-
